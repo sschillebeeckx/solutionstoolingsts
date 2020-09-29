@@ -7,6 +7,8 @@ import be.abis.courseadmin.exception.AgeCannotBeNegativeException;
 import be.abis.courseadmin.model.Course;
 import be.abis.courseadmin.model.Instructor;
 
+
+
 public class ExG4 {
 	
 	public static void main (String[] args) {
@@ -23,9 +25,7 @@ public class ExG4 {
 		c1.addInstructor(i1);
 		c1.addInstructor(i2);
 		
-		double totalPrice = c1.calculatePrice();
-				
-		c1.printInfo();
+	    c1.printInfo();
 		
 	  } catch (IOException| AgeCannotBeNegativeException  e){
 		  System.out.println(e.getMessage());

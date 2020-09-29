@@ -69,23 +69,14 @@ public class Instructor {
 	}
 	
 	public void printSalaryHistory() throws IOException{
-
-		 BufferedWriter bw = Files.newBufferedWriter(Paths.get("salaryhistory.txt"));
-		 this.doPrinting(bw);
-		 bw.close();
-         System.out.println("salaryhistory.txt was created");
+		 this.printSalaryHistory("salaryhistory.txt");
+       System.out.println("salaryhistory.txt was created");
 	}
 	
 	public void printSalaryHistory(String fileName) throws IOException{
 		 
 		 BufferedWriter bw = Files.newBufferedWriter(Paths.get(fileName));
-		 this.doPrinting(bw);
-		 bw.close();
-		 System.out.println(fileName + " was created");
-	}
-	
-	public void doPrinting(BufferedWriter bw)throws IOException{
-		int seniority =0;		 
+		 int seniority =0;		 
 		 double salary=startSalary;
 		  for (int loopAge=startAge; loopAge<=age ; loopAge+=5) {
 			if (loopAge!=startAge) salary=salary*1.03;
@@ -97,8 +88,10 @@ public class Instructor {
 				break;
 			}
 	     }
-		 
+		 bw.close();
+		 System.out.println(fileName + " was created");
 	}
+
 	
 	public String toString(){
 		return firstName + " " + lastName + "(" + age + " years old).";

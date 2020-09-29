@@ -20,8 +20,6 @@ public class ExG1 {
 		c1.setPriorKnowledgeRequired(true);
 		c1.addInstructor(i1);
 		c1.addInstructor(i2);
-		
-		double totalPrice = c1.calculatePrice();
 				
 		c1.printInfo();
 		

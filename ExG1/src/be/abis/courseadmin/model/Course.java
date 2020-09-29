@@ -70,7 +70,7 @@ public class Course {
 	}
 	
 	public void printInfo() throws IOException{
-	   BufferedWriter bw = Files.newBufferedWriter(Paths.get("printing.txt"));
+	   BufferedWriter bw = Files.newBufferedWriter(Paths.get("courseInfo"+title+".txt"));
 	   double totalPrice = this.calculatePrice();
 	   bw.write("The " + title + " course takes " + numberOfDays + " days and costs " + totalPrice + " euros. \nPrior knowledge required: " + priorKnowledgeRequired );
 	   String label;
